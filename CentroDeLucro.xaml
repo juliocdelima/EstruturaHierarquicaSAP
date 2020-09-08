@@ -1,0 +1,399 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CentroDeLucro" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="934,2740" sap2010:WorkflowViewState.IdRef="CentroDeLucro_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="44">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="36">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="CentroDeLucro" sap:VirtualizedContainerService.HintSize="468,2575" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="centroDeLucro" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadRange AddHeaders="True" DataTable="[centroDeLucro]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="426,87" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="CENTRO DE LUCRO" WorkbookPath="Estruturas\Estruturas.xlsx">
+      <ui:ReadRange.Range>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:ReadRange.Range>
+    </ui:ReadRange>
+    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'mstsc.exe SAP'" sap:VirtualizedContainerService.HintSize="426,106" sap2010:WorkflowViewState.IdRef="ClickImage_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:ClickImage.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:ClickImage.CursorPosition>
+      <ui:ClickImage.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJkAAAAiCAYAAABMUXsMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALSSURBVHhe7ZvLbhJRHIfPs/gY7nSpxpWu1Lhx6wuoiRrfwbR1Ybn1QrG0KdBiExtKYzd1BbW0cktbGKBStZRLp9C/Z8jBnjkDI006K35f8p38D5mc1RcmDMDiWzsEoZMyAsBhWK2hE4ROyk6bOkHopIgMOi6rN89JNrmboY8uN41NfIA2jo9PQO7kpIuSqYypIVVWb/FBcto/R+vxTUokdml7ew8O8jtMJFPdVrxTs6aGVFmDL7Iut5cS2ynxuQAAe4xW3G6PqSFV1jjjg6Tb66MdfssEYBh+7KXJ4/GaGlJlzbM2yXp805RO58URANiTzeTI55syNaTKWnyRNe6v6QwiA8NhRGY0o3Yky1o6HyR9s35KZ/fFEQDYk+GtTM3MmRpSZWd8kQ0EFyi/XxBHgFGhVqvR0dERFYtFi5qmUbVapXq9Lq6+xGhlfj5oakiV6ecdkp3xByiTOxBHgFFhJfaN7j99R/eevKW7j9/QnUevuxqz8frzV++pUW+Kqy/J8lb8/jlTQ6pMb/NBcvbTPGXzh+IIMEqMuyN04+Yzi7cfvqRy5VhcZSbHW/EHgqaGVNk5X2QR2Wgz5gqbArv14MXAwAx6kakdybJ2+4JkERnohfa/wAx6kakdybJ2hw+SiAwYzARjVKpUxW4w/yJTOpJlHb7IIjJwFXqRqR3Jss4FHyTxCANchd4jDLUjWcYl2eBiiA4KJXEEAPYYrRjNqB3JWiJbCEWoUCyLIwCwRyuWaHEpYmpI1fJHkqXwMhW1itgBYE9JK1M4HBG7/lgiC61EeWQ/xQ4Ae8qlCoWXP4tdfyyRhaOrVCojMjAcGm8lsrIqdv2xRLYWi3d/Wnv8q0YntSaEA/3z+4RSqV36shYX9fTHEln+sEzrG5vdt0AIBxvtur7xlTdj/zTCEhkA1w0iA46DyIDjIDLgOGwrkSYIndTytRKE1y07begEoXPq9Bds5zjixyyVmAAAAABJRU5ErkJggg==" />
+      </ui:ClickImage.Image>
+      <ui:ClickImage.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d4099144-764a-44f9-92c1-a42b754f6b2f" Selector="&lt;wnd app='mstsc.exe' cls='RAIL_WINDOW' title='SAP Easy Access (PBRNT28100BR.BR.Wal-Mart.com)' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:ClickImage.Target>
+    </ui:ClickImage>
+    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'mstsc.exe SAP'" sap:VirtualizedContainerService.HintSize="426,134" sap2010:WorkflowViewState.IdRef="TypeInto_5" Text="KCH2">
+      <ui:TypeInto.Target>
+        <ui:Target Element="{x:Null}" Id="0ca8c888-ac56-4b7b-9bad-b46adaa29bd8" InformativeScreenshot="81471bbc12053153dea3d726f6ac240d" Selector="&lt;wnd app='mstsc.exe' cls='RAIL_WINDOW' title='SAP Easy Access (PBRNT28100BR.BR.Wal-Mart.com)' /&gt;">
+          <ui:Target.ClippingRegion>
+            <ui:Region Rectangle="45, 35, 164, 42" />
+          </ui:Target.ClippingRegion>
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:TypeInto.Target>
+    </ui:TypeInto>
+    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'mstsc.exe SAP'" sap:VirtualizedContainerService.HintSize="426,106" sap2010:WorkflowViewState.IdRef="ClickImage_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+      <ui:ClickImage.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:ClickImage.CursorPosition>
+      <ui:ClickImage.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL/SURBVEhL7VT7S5NRGD5/SESFCaVRuqmFmkJGN5VCzFuamKZpUZqW16XzVpSYc0ppzgtimdooa865pOiXfgqCAqlEykwQCyF1FzefzntqY6Lf1MBfogPP2buP7zzPed/nfT82Z1rARoPNmXmwwWDzfFsrRsY/4GZvHWKqk7E/77BA3PUU3NY2YnRybMUzBDZv4cEqMFstqO6uQUR5GDLbAqF46o/q5zKBkn5/ZLQG4ZgyTIhZbcvPM5PFBncggXPqbJxuCEGV0RdlgztQpNuCgmebBIp5TM8ude1DREUYzjfmCiFXDmYmIjegDEigYmj3EnJXxKrkKGgtRedwN8J5RqrHd5ZwMLOVBxIgD6hElIGUQGKjD5JrMmDiGdvsdqTWXUDo1aP4PDXu5GEWvkmBsshqDxTlWEngTMsuHFfGYWpmGosA2o33Ea8KRLomSGTj4GHWBTukQF1EJuf0eiK2zk+UJbt3mxDI6vLEwcJIvP8yIgTejr0TGeRpPVCgDUBKbaaTh1ltPJDAgfxwVA7JhMDDV1o8eNmHqFt7hQD9Gt4MC4EfszOIrkxCqsYbhbrNKBvwQ2RpjJOHLfBNCjQHlAll9NM0KwiJmMRbBjvEf0LuvWIkNPiKDEmkfFCOIyVRTh5msy1CCjRoNAcJaj+kqy5izjIvSD/xwXMIdL3owclaf6dPxQNbkc/LlcYbwMHDbHYeSICmm4avzLATcdyPrIbLooscAuQHZZXd99snAr17tiUI6v4mJw+z800KHydGhZlVRploYTI+p6lQCFH5qIzUYa5ZVBjkQvjr9ISTh9kXeeAGN3pqkaQOQaVxDxR6DyF0RaMQwxdfL3MKKPTb+WV8kFgfIrJw5WAccAf6RJCxp/hh8kdp8EJmpzcyOryEyXR7ekZtm6AKRVG7kt/evoRjVREHunn70lykNQcLY6mDlHo58h8FILUpGIeKTuDJa92KZxn3b82L6nxXpxGdQy0afi1adF2zvg3fvk/+eWv5WpfI367/Iuta/4oI8AuXVRsnQXD/ZAAAAABJRU5ErkJggg==" />
+      </ui:ClickImage.Image>
+      <ui:ClickImage.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7cbaf2f0-9743-471f-b4a4-fb90723b8890" Selector="&lt;wnd app='mstsc.exe' cls='RAIL_WINDOW' title='SAP Easy Access (PBRNT28100BR.BR.Wal-Mart.com)' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:ClickImage.Target>
+    </ui:ClickImage>
+    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[centroDeLucro]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="426,1890" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,1742" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'mstsc.exe Modificar'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target Element="{x:Null}" Id="3ce0c299-534e-4a67-94e4-7b9976eb25c9" InformativeScreenshot="3bb804b4cc3e5c6a0853078eb0606e6e" Selector="&lt;wnd app='mstsc.exe' cls='RAIL_WINDOW' title='Modificar Grupo de centros de lucro: 1ª tela (PBRNT28100BR.BR.Wa*' /&gt;">
+                  <ui:Target.ClippingRegion>
+                    <ui:Region Rectangle="225, 189, 146, 35" />
+                  </ui:Target.ClippingRegion>
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'mstsc.exe Modificar'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_9" Text="[row.Item(0).ToString]">
+              <ui:TypeInto.Target>
+                <ui:Target Element="{x:Null}" Id="46f72d11-bd92-4353-abe9-d47dedd4f092" InformativeScreenshot="b39970103f8462a12046ad45d96c6e76" Selector="&lt;wnd app='mstsc.exe' cls='RAIL_WINDOW' title='Modificar Grupo de centros de lucro: 1ª tela (PBRNT28100BR.BR.Wa*' /&gt;">
+                  <ui:Target.ClippingRegion>
+                    <ui:Region Rectangle="226, 184, 146, 37" />
+                  </ui:Target.ClippingRegion>
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'mstsc.exe SAP'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:ClickImage.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:ClickImage.CursorPosition>
+              <ui:ClickImage.Image>
+                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACYAAAAiCAYAAAAzrKu4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADNSURBVFhH7dAxCsJAEIXhvYK9V7CyF+w8hmLjBSw8gUcxHkCwsRNS6gWmFzsbO5mwC0GMEzJvhTDIFB8p8pb92XB/PNmicKEbW+RhKA9DeRgqO4xWo1bSHvVT2Os6/WIn7Dx4MxXWYCKsjbRHZYfViIjni2X6Sv9zwWG7Yp9CusSddF4LDouXxtfpEnfSea3sMOlfrdewyXomQjdaUNj2NP7QvFSz0YLDNodhIl2q2Wj9x4tJ0I2WOqxvHobyMJSHoTwM5WGoUBxLtqfkCnLEem14SLMuAAAAAElFTkSuQmCC" />
+              </ui:ClickImage.Image>
+              <ui:ClickImage.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7cbaf2f0-9743-471f-b4a4-fb90723b8890" Selector="&lt;wnd app='mstsc.exe' cls='RAIL_WINDOW' title='Modificar Grupo de centros de lucro: 1ª tela (PBRNT28100BR.BR.Wa*' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:ClickImage.Target>
+            </ui:ClickImage>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'mstsc.exe Modificar'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target Element="{x:Null}" Id="6cc683d2-db6c-4e38-ab4d-93fa63d515c7" InformativeScreenshot="86299cb9c815b9edd34f2b3222624c06" Selector="&lt;wnd app='mstsc.exe' cls='RAIL_WINDOW' title='Modificar Grupo de centros de lucro: estrutura (PBRNT28100BR.BR.*' /&gt;">
+                  <ui:Target.ClippingRegion>
+                    <ui:Region Rectangle="14, 148, 77, 20" />
+                  </ui:Target.ClippingRegion>
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'mstsc.exe Modificar'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target Element="{x:Null}" Id="7bfe86f3-7e26-495a-a327-83b2b4d5344a" InformativeScreenshot="7cdce05351e890b87ef61500b73e3238" Selector="&lt;wnd app='mstsc.exe' cls='RAIL_WINDOW' title='Modificar Grupo de centros de lucro: estrutura (PBRNT28100BR.BR.*' /&gt;">
+                  <ui:Target.ClippingRegion>
+                    <ui:Region Rectangle="195, 110, 110, 28" />
+                  </ui:Target.ClippingRegion>
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'mstsc.exe Modificar'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target Element="{x:Null}" Id="5925f7ba-1fbd-46c1-bd99-462d0011e72e" InformativeScreenshot="93eceba26974a470e3dae6f3ebac0f20" Selector="&lt;wnd app='mstsc.exe' cls='RAIL_WINDOW' title='Modificar Grupo de centros de lucro: estrutura (PBRNT28100BR.BR.*' /&gt;">
+                  <ui:Target.ClippingRegion>
+                    <ui:Region Rectangle="62, 208, 86, 24" />
+                  </ui:Target.ClippingRegion>
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'mstsc.exe Modificar'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_10" Text="[row.Item(1).ToString]">
+              <ui:TypeInto.Target>
+                <ui:Target Element="{x:Null}" Id="a4eb5ced-62c5-49b0-9e28-16bdd3074b3f" InformativeScreenshot="cda754a2ba03346b3b38418d18ddd568" Selector="&lt;wnd app='mstsc.exe' cls='RAIL_WINDOW' title='Modificar Grupo de centros de lucro: estrutura (PBRNT28100BR.BR.*' /&gt;">
+                  <ui:Target.ClippingRegion>
+                    <ui:Region Rectangle="64, 209, 82, 25" />
+                  </ui:Target.ClippingRegion>
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'mstsc.exe Modificar'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target Element="{x:Null}" Id="85b0bdd7-10e0-441f-87c9-a18d233b1b37" InformativeScreenshot="a41c944485264bacc36f244ff095d048" Selector="&lt;wnd app='mstsc.exe' cls='RAIL_WINDOW' title='Modificar Grupo de centros de lucro: estrutura (PBRNT28100BR.BR.*' /&gt;">
+                  <ui:Target.ClippingRegion>
+                    <ui:Region Rectangle="148, 210, 297, 23" />
+                  </ui:Target.ClippingRegion>
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'mstsc.exe Modificar'" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_11" Text="[row.item(2).ToString]">
+              <ui:TypeInto.Target>
+                <ui:Target Element="{x:Null}" Id="38ed7a5a-ef8c-4697-bce9-a6ba371081d4" InformativeScreenshot="753c57fd227d4253bb53fd0aced92cfa" Selector="&lt;wnd app='mstsc.exe' cls='RAIL_WINDOW' title='Modificar Grupo de centros de lucro: estrutura (PBRNT28100BR.BR.*' /&gt;">
+                  <ui:Target.ClippingRegion>
+                    <ui:Region Rectangle="147, 212, 290, 22" />
+                  </ui:Target.ClippingRegion>
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'mstsc.exe Modificar'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target Element="{x:Null}" Id="eab45347-47fc-4934-90e3-68184ab68e69" InformativeScreenshot="b26df86cb6da17b7b9cd6ba7b6229c2b" Selector="&lt;wnd app='mstsc.exe' cls='RAIL_WINDOW' title='Modificar Grupo de centros de lucro: estrutura (PBRNT28100BR.BR.*' /&gt;">
+                  <ui:Target.ClippingRegion>
+                    <ui:Region Rectangle="221, 40, 26, 24" />
+                  </ui:Target.ClippingRegion>
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'mstsc.exe Modificar'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_24" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target Element="{x:Null}" Id="3a8025de-ad65-46de-aaed-0c03003374d2" InformativeScreenshot="b392d9c06f46fccf6eddc5b5fd7331d1" Selector="&lt;wnd app='mstsc.exe' cls='RAIL_WINDOW' title='Modificar Grupo de centros de lucro: estrutura (PBRNT28100BR.BR.*' /&gt;">
+                  <ui:Target.ClippingRegion>
+                    <ui:Region Rectangle="254, 41, 28, 30" />
+                  </ui:Target.ClippingRegion>
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+  </Sequence>
+</Activity>
